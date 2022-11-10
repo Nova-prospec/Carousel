@@ -1,0 +1,78 @@
+
+/*  === GENERAL STYLING */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+/* === MAIN STYLING */
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100vw;
+     min-height: 100vh; 
+     /* background-color: rgba(13, 2, 66, 0.925); */
+     background: linear-gradient();
+     background:  linear-gradient( rgba(17, 13, 32, 0.925),  rgba(29, 20, 73, 0.925));
+}
+body > h1{
+    margin-bottom: 4rem;
+    color: rgb(255, 255, 255);
+}
+.carousel{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    overflow: hidden;
+    height: 300px;
+    width: 300px;
+    position: relative;
+    border-radius: 6px;
+}
+.carousel-images img{
+    width: 300px;
+    height: 300px;
+}
+.backward-arrow, .forward-arrow{
+    position: absolute;
+    font-size: 1.5rem;
+    z-index: 1;
+    transition: opacity 0.45s;
+}
+.forward-arrow{
+    right: 5px;
+}
+.backward-arrow{
+    left: 5px;
+}
+.carousel-images{
+    display: flex;
+    transform: translateX(0);
+    transition: transform 0.5s;
+
+}
+
+.forward-arrow, .backward-arrow{
+    color: rgb(255, 255, 255);
+    font-size: 2rem;
+    cursor: pointer;
+    opacity: 0;
+}
+.show{
+    opacity: 1;
+}
+
+
+/* ==== MEDIA QUERIES */
+@media screen and (max-width: 320px) {
+    .carousel{
+        transform: scale(0.9);
+    }
+}
